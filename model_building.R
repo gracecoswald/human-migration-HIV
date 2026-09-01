@@ -21,8 +21,7 @@
 #   7. Model diagnostics
 #   8. Predictions and Figure 4
 #
-# Standard errors are clustered by time period (cluster = "year0"),
-# giving six clusters and t-tests on 5 degrees of freedom.
+
 # =====================================================================
 
 # Packages are loaded by 00_libraries.R (see run_all.R).
