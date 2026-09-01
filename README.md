@@ -1,12 +1,7 @@
 # HIV-1 variant diversity and international migration
 
-Analysis code for *"Relationship of migration flows, HIV prevalence differences
-and time with Root Mean Squared Deviation (RMSD) of HIV-1 variant distributions
-in pairs of countries."*
+Analysis code for *"Human migration and the global distribution of HIV-1 genetic variants"*
 
-The analysis links country-level HIV-1 variant distributions, derived from a
-systematic review, to bilateral migration flow estimates, and models the
-relationship between migration and variant-distribution similarity.
 
 ---
 
@@ -22,7 +17,7 @@ Everything runs in order and writes its outputs to the working directory.
 
 | File | Contents |
 |---|---|
-| `HIVIDDONDPHProject_DATA_LABELS_2024-05-07_1226.xlsx` | REDCap export of the systematic review; one row per study record |
+| `HIVIDDONDPHProject_DATA_LABELS_2024-05-07_1226.xlsx` | REDCap export of the global molecular epidemiology database, one row per study record |
 | `migration_df_final.csv` | Bilateral migration flow estimates by country pair and time period |
 | `population_data.csv` | World Bank country populations by year |
 | `PLHIV_data.xlsx` | UNAIDS people living with HIV, by country and year |
@@ -30,11 +25,6 @@ Everything runs in order and writes its outputs to the working directory.
 ### Software
 
 R 4.5 or later. `00_libraries.R` installs anything missing.
-
-**`fixest` version matters.** The published standard errors were produced under
-an older release; more recent versions handle the ill-conditioned interaction
-models differently and give slightly different standard errors on the
-`total_flow x time` terms. See *Known issues* below.
 
 ---
 
@@ -62,9 +52,9 @@ Run in this order. `run_all.R` does it for you.
 
 | Script | Writes | Purpose |
 |---|---|---|
-| `country_diversity.R` | `complete_1995_diversity.csv` | Diversity indices over time for countries with data in every period, with Kendall trend tests. |
+| `country_diversity.R` | `complete_1995_diversity.csv` | Diversity indices over time for countries with data in every period, with tests. |
 | `region_distributions.R` | `counts_region_time.csv`, `proportions_region_time.csv` | Regional variant distributions by time period (Supp Table 2). |
-| `region_migration.R` | `region_flow_matrix_*.csv`, `total_region_migration_new.csv` | Region-to-region migration matrices (Table 3) and immigrant / emigrant / within-region totals. |
+| `region_migration.R` | `region_flow_matrix_*.csv`, `total_region_migration_new.csv` | Region-to-region migration matrices (supp Table 3) and immigrant / emigrant / within-region totals. |
 
 ### Figures
 
