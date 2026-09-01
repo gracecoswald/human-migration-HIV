@@ -84,5 +84,4 @@ used by the main analysis.
 
 ## Output naming
 
-Main analysis outputs carry the `_test` suffix from development; sensitivity
-outputs carry `_pol` and `_rob`. Nothing overwrites anything else.
+sensitivity outputs carry `_pol` and `_rob` suffix. Nothing overwrites anything else.
