@@ -1,4 +1,4 @@
-# HIV-1 variant diversity and international migration
+# Human migration and the global distribution of HIV-1 genetic variants
 
 Analysis code for *"Human migration and the global distribution of HIV-1 genetic variants"*
 
