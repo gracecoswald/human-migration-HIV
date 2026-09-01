@@ -43,9 +43,9 @@ Run in this order. `run_all.R` does it for you.
 
 | Script | Reads | Writes | Purpose |
 |---|---|---|---|
-| `subtyped_new.R` | REDCap xlsx | `counts_country_subtype_distirbutions.csv`, `proportions.csv`, `RMSDcountries_test_.csv`, `indices.csv` | Cleans the review data, assigns regions, collapses variant columns, splits multi-year studies across years, aggregates by country and time period, computes pairwise RMSD between every country pair, and computes Shannon and Simpson diversity indices. |
-| `migration_RMSD_creation.R` | `migration_df_final.csv`, RMSD | `migration_RMSD_test.csv` | Sums bidirectional migration per country pair, assigns regions to both sides, joins to RMSD. Also builds `net_flow` and `final_region_flow`, used by the figure scripts. |
-| `migration_RMSD_adjusted.R` | migration, population, PLHIV | `migration_adj_RMSD_test.csv`, `migration_adj_RMSD_absdiff_test.csv` | Weights flows by destination population (per 100,000), and computes the absolute difference in HIV prevalence between each pair. |
+| `subtyped_new.R` | REDCap xlsx | `counts_country_subtype_distributions.csv`, `proportions.csv`, `RMSDcountries_test_.csv`, `indices.csv` | Cleans the review data, assigns regions, collapses variant columns, splits multi-year studies across years, aggregates by country and time period, computes pairwise RMSD between every country pair, and computes Shannon and Simpson diversity indices. |
+| `migration_RMSD_creation.R` | `migration_df_final.csv`, RMSD | `migration_RMSD.csv` | Sums bidirectional migration per country pair, assigns regions to both sides, joins to RMSD. Also builds `net_flow` and `final_region_flow`, used by the figure scripts. |
+| `migration_RMSD_adjusted.R` | migration, population, PLHIV | `migration_adj_RMSD.csv`, `migration_adj_RMSD_absdiff.csv` | Weights flows by destination population (per 100,000), and computes the absolute difference in HIV prevalence between each pair. |
 | `model_building.R` | the three joined datasets | `table2_main_results.docx`, `table4_standardised.docx`, `predicted_RMSD_prev.png` | Fixed-effects quasi-Poisson models of RMSD on migration flow, prevalence difference and time. Produces Table 2, Appendix Table 4 and Figure 4. |
 
 ### Descriptive tables
